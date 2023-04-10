@@ -1,0 +1,101 @@
+
+:root {
+  --black-color: rgb(16, 15, 15);
+  --blue-color: rgb(153, 197, 211);
+  --violet-color: rgb(226, 95, 226);
+  --green-color: rgb(75, 216, 75);
+  --yellow-color: rgb(242, 242, 78);
+  --white-color: #fff;
+  --orange-color: rgba(255, 166, 0, 0.877);
+  --h1-size: 4rem;
+  --big-size: 2rem;
+  --medium-size: 1.3rem;
+  --text-size: 1rem;
+  --mg1: 0.5rem;
+  --mg2: 1rem;
+  --mg3: 3.5rem;
+  --mg4: 5.5rem;
+}
+
+*, *:before, *:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: var(--orange-color);
+  text-align: center;
+
+}
+
+.container {
+  position: absolute; /* line 30 to line 33 to make this div in the center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-color);
+  padding: var(--mg3) 0;
+  width: 40%; /* to make size of this dix bigger or smaller */
+  min-width: 550px; /* to make the size of div fixed even the screen is smaller */
+  border-radius: 15px;
+  box-shadow: 0 0 20px var(--black-color);
+
+}
+.timerDisplay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: var(--big-size);
+  left: 5%;
+  background-color: var(--white-color);
+  padding: var(--mg3);
+  width: 90%; 
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--black-color);
+  font-family: 'Roboto mono', monospace;
+}
+
+/* Styling button */
+.buttons button{
+  font-size: var(--medium-size);
+  height: var(--mg3);
+  width: var(--mg4);
+  margin: var(--mg2);
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+  box-shadow: 2px 2px 5px var(--black-color);
+  transition: all 0.3s ease; /* to make it look better */
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.buttons button:nth-last-child(2){
+  background-color: var(--violet-color); /* button 2 */
+}
+
+.buttons button:nth-last-child(1){
+  background-color: var(--green-color); /* button 3 */
+} 
+.buttons button:hover {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  transform: scale(1.1); /* to make it move when the mouse on it*/
+  box-shadow: 4px 4px 10px var(--black-color);
+}
+/* Styling creater */
+.creater {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: var(--mg1);
+  font-size: var(--text-size);
+}
+
+/* To make a div in the center of a page, I use method 1 from this website 
+https://medium.com/nerd-for-tech/best-3-ways-to-center-a-div-with-css-1668b66c9891
+*/
